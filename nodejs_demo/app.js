@@ -36,7 +36,7 @@ app.use(function(req, res, next){
     return next();
   }
   var url = req.originalUrl;
-  var fliter = ['/login', ];
+  var fliter = ['/login', '/api'];
   for (idx in fliter){
     var each = fliter[idx];
     if (url.substring(0, each.length) == each){

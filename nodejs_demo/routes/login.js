@@ -29,7 +29,7 @@ router.post('/', function(req, res, next) {
 });
 
 function Login(username, password, callback){
-	var module_name = path.join(path.resolve() , './config/login.js');
+	var module_name = path.join(path.resolve(), './config/login.js');
 	delete require.cache[module_name];
 	var cfg = require(module_name);
 	if (cfg[username] == password){
